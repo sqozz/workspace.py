@@ -11,5 +11,15 @@ Workspaces that want to have attention, will cause workspace.py to dynamically f
 Polling in i3-py is broken atm. I've still no clue what exactly is going on but for yet there comes some magic string in the middle of a message from i3-IPC which i3-py cannot handle yet.
 So for now workspace.py uses some adjustable loop which polls the current i3 workspace configuration.
 
+# Example config
+	workspaces: {
+		exec: "/home/sqozz/scripts/barconfig/workspace.py";
+		fixed-size: 400;
+		align: "center";
+		foreground-color-rgb: 0xb5bd68;
+		type: "persist";
+		pango-markup: true;
+	}
+
 # My usecase
 I use this script with yabar to get some enhanced workspace overview. Configuration is pretty straigth forward since yabar calls this script once as continious procress piping out information for yabar to display.
